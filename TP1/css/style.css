@@ -1,0 +1,26 @@
+body{
+    background: -moz-radial-gradient(grey, black 80%);
+}
+.home-container{
+    margin-top: 13%;
+}
+
+.card{
+    background-color: #505050;
+}
+.img-thumbnail{
+    background-color: grey;
+    border-color: grey;
+}
+.filter-tab{
+    margin-bottom: 5px;
+}
+
+.texto-blanco{
+    color: khaki;
+}
+
+.fijo{
+    height: 45px;
+    width: 150px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>TP 1 Entrega</title>
+
+		<link rel="stylesheet" href="css/libs/bootstrap4.min.css">
+		<link rel="stylesheet" href="css/libs/jquery-ui.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+<div class="container-fluid">
+
+	<div class="row justify-content-md-center">
+		<h2 CLASS="texto-blanco">TP 1 FILTROS IMAGEN</h2>
+		<div>
+	<div class="row justify-content-md-center ">
+
+		<div class="col-md-2">
+			<button type = "button" class="btn btn-secondary fijo"id="greyScale">Escala Gris</button>
+			<button type = "button" class="btn btn-secondary fijo"id="negativo">Negativo</button>
+			<button type = "button"class="btn btn-secondary fijo"id="sepia" >Sepia</button>
+			<button type = "button"class="btn btn-secondary fijo"id="blur" >Blur</button>
+			<button type = "button"class="btn btn-secondary fijo"id="binarizacion">Binarización</button>
+			<button type = "button"class="btn btn-secondary fijo"id="borde">Borde</button>
+			<div class="form-group">
+				<label for="range" class="slider-text texto-blanco">FILTRO</label>
+				<input id="range" class="form-control slider" type="range" min="-100" max="100" step="10" value="0">
+			</div>
+			<button type="button" id="contraste" class="btn btn-secondary fijo">Activar Contraste</button>
+			<button type = "button"class="btn btn-secondary fijo" id="saturacion">Activar Saturación</button>
+			<button type = "button"class="btn btn-secondary fijo"id="brillo">Activar Brillo</button>
+		</div>
+		<div class="col-md-6" id="paint">
+			<canvas id="canvas" width="620" height="500" style="border: #000 solid 1px;" > </canvas>
+
+		</div>
+		<div class="col-md-1">
+			<button type = "button"class="btn btn-primary fijo"id="restaurarImagen">RESTAURAR</button>
+			<button type = "button"class="btn btn-secondary fijo"id="limpiar">LIMPIAR</button>
+			<input type="file" id="carga" class="fijo"name="carga" />
+			<a href="#" class="btn btn-primary fijo" id="guardarImagen" download="unExito.jpg" role="button" >Guardar imagen</a><br/>
+		</div>
+	</div>
+</div>
+<div class ="row justify-content-around ">
+	<div class="col-1">
+		<button type = "button"class="btn btn-secondary " id="lapiz">Lapiz</button>
+	</div>
+	<div class="col-1 offset-md-1" ></div>
+	<div class="col-1">
+		<button type = "button"class="btn btn-secondary " id="goma">Borrar</button>
+
+	</div>
+	<div class="col-1">
+	</div>
+	<div class="col-1">
+		<input id = "color" type="color" id="colores" />
+	</div>
+</div>
+	<script type="text/javascript" src="js/libs/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/filtro1.js"></script>
+        <script type="text/javascript" src="js/filtro.js"></script>
+
+	</body>
+
+</html>
+
