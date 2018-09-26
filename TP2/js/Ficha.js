@@ -30,10 +30,10 @@ class Ficha{
         let x = (mouseX - this.fx);
         let y = (mouseY - this.fy);
         if(Math.sqrt(x*x + y*y) < this.radio){
-            console.log("dentro: "+Math.sqrt(x*x + y*y));
+
         }
         else{
-            console.log("fuera");
+
         }
         return Math.sqrt(x*x + y*y) < this.radio ? true : false;
     }

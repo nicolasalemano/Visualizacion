@@ -12,6 +12,7 @@ class Juego{
         this.turno=this.jugador1;
         this.col=[240,330,420,505,594,685,770,870];
         this.fil=[52,137,225,315,402,494];
+        this.ganador=null;
     }
 
     agregarTablero(){
@@ -51,7 +52,7 @@ class Juego{
     fichaSeleccionada(e){
     let mouseX=e.layerX-e.currentTarget.offsetLeft;
     let mouseY=e.layerY-e.currentTarget.offsetTop;
-                 console.log("MOUSE: ("+mouseX+","+mouseY+")");
+               //  console.log("MOUSE: ("+mouseX+","+mouseY+")");
         if(this.turno.ficha.isClicked(mouseX,mouseY)) {
             this.arrastrarFicha(e);
         }
@@ -72,7 +73,7 @@ class Juego{
     cursorDefault(e){
         let x=e.layerX-e.currentTarget.offsetLeft;
         let y=e.layerY-e.currentTarget.offsetTop;
-        console.log("("+x+","+y+")");
+      //  console.log("("+x+","+y+")");
         this.depositarFicha(x,y);
         canvas.style.cursor = 'default';
     }
@@ -106,31 +107,35 @@ class Juego{
         while(this.tablero[x][val]!=0){
             val--;
         }
-        console.log("val: "+val);
+     //   console.log("val: "+val);
         this.tablero[x][val]=this.turno.getID();
         if(this.turno==this.jugador1){
-            this.turno=this.jugador2;
+
             this.jugador1.ficha.restaFicha();
             this.jugador1.muestraCantidadFicha(127);
-
+            this.insertarFichaTablero(x, val);
+            this.turno=this.jugador2;
         }else{
-            this.turno=this.jugador1;
-            this.jugador2.muestraCantidadFicha(1027);
+
             this.jugador2.ficha.restaFicha();
+            this.jugador2.muestraCantidadFicha(1027);
+            this.insertarFichaTablero(x, val);
+            this.turno=this.jugador1;
         }
         //494
-       this.insertarFichaTablero(x, val);
+
     }
 
     insertarFichaTablero(x,y){
+
         let valX=this.col[x-1];
         let valY=this.fil[y-1];
         let src;
         let img=new Image();
-        console.log("("+valX+","+valY+")");
 
-        if(this.turno.getID() !=1){
+        if(this.turno.getID() ==1){
             src="img/azul.png";
+
         }
         else{
             src="img/roja.png";
@@ -139,6 +144,117 @@ class Juego{
         img.onload = function(){
 
             ctx.drawImage(this, valX, valY  );
+        }
+
+        this.controlarGanador(this.turno);
+
+
+    }
+    controlarGanador(turno){
+        this.encuentraVertical(turno);
+        this.encuentraHorizontal(turno);
+        this.controlDiag1(turno);
+        this.controlDiag2(turno);
+        this.cartelGanador()
+
+    }
+
+    //diagonal \
+    controlDiag2(turno){
+
+        for(let x=7;x>3;x--){
+            for(let y=6;y>4;y--){
+                if((this.tablero[x][y]==turno.getID())&&(this.tablero[x-1][y-1]==turno.getID())&&(this.tablero[x-2][y-2]==turno.getID())&&(this.tablero[x-3][y-3]==turno.getID())){
+
+                    this.ganador=turno;
+
+                }
+            }
+        }
+    }
+
+    //Diagonal /
+    controlDiag1(turno){
+
+        for(let x=4;x<8;x++){
+            for(let y=1;y<4;y++){
+                /*let uno=this.tablero[x][y];
+                let dos=this.tablero[x-1][y+1];
+                let tres=this.tablero[x-2][y+2];
+                let cuatro=this.tablero[x-3][y+3];
+    console.log("uno: "+uno+" dos: "+dos+" tres: "+tres+" cuatro: "+cuatro );
+*/
+                if((this.tablero[x][y]==turno.getID())&&(this.tablero[x-1][y+1]==turno.getID())&&(this.tablero[x-2][y+2]==turno.getID())&&(this.tablero[x-3][y+3]==turno.getID())){
+
+                    this.ganador=turno;
+
+                }
+            }
+        }
+    }
+
+    //Horizontal
+    encuentraHorizontal(turno){
+        let encontrado=false;
+        let total=0;
+        for(let x=1;x<8;x++){
+            for (let y=1; y<7;y++){
+
+                if(encontrado){
+                    if(this.tablero[y][x]==turno.getID()){
+                        total++;
+                    }
+                    else{
+                        encontrado = false;
+                        total = 0;
+                    }
+                }
+                if((this.tablero[y][x]==turno.getID())&&(!encontrado)){
+                    encontrado = true;
+                    total++;
+                }
+                if(total==4){
+                    this.ganador=turno;
+                    console.log("Horizontal Ganador: "+turno.getID());
+                }
+            }
+        }
+    }
+
+    //VERTICAL
+    encuentraVertical(turno){
+        let encontrado=false;
+        let total=0;
+        for(let x=1;x<8;x++){
+            for (let y=1; y<7;y++){
+                if(encontrado){
+                    if(this.tablero[x][y]==turno.getID()){
+                        total++;
+                    }
+                    else{
+                        encontrado = false;
+                        total = 0;
+                    }
+                }
+                if((this.tablero[x][y]==turno.getID())&&(!encontrado)){
+                    encontrado = true;
+                    total++;
+                }
+                if(total==4){
+                    this.ganador=turno;
+                    console.log("Vertical ganador"+turno.getID());
+                }
+            }
+        }
+    }
+
+
+    cartelGanador(){
+        if(this.ganador!=null){
+        document.getElementById("cartelGanador").innerHTML = "Jugador: "+this.ganador.getNombre()+' GANADOR!!!';
+         setTimeout(function(){ document.getElementById("cartelGanador").innerHTML = ''; }, 5000);
+
+
         }
     }
 }

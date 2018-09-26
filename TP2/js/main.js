@@ -13,11 +13,7 @@ juego.agregarTablero();
 
 
 canvas.addEventListener("mousedown", function(event){
-
     juego.fichaSeleccionada(event);
-
-
-
 });
 
 canvas.addEventListener("mouseup", function(event){
