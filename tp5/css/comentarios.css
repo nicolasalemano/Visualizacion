@@ -13,6 +13,15 @@
     margin-top: -10px;
 
 }
+.comentario{
+
+	 padding-left: 0;
+    padding-right: 0;
+	width: 1000;
+	height: 480px;
+	overflow-y: scroll;
+
+}
 
 .tweet{
 	color:#35B4A8;
