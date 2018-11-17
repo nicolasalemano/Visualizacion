@@ -1,0 +1,88 @@
+
+
+//cambio de color al carrusel
+
+
+.ranking-titulo{
+	font-size: 12px;
+	color: white;
+	background-color: red;
+}
+
+::-webkit-scrollbar {
+      width: 15px;
+}
+
+
+
+.ranking{
+
+	 padding-left: 0;
+    padding-right: 0;
+	width: 328px;
+	height: 380px;
+	overflow-y: scroll;
+
+}
+
+.medalla{
+	max-width: 30px;
+	max-height: 30px;
+}
+
+
+
+
+/*EFECTO TABLA RANKUING				INICIO*/
+.table-curved {
+    border-collapse: separate;
+}
+.table-curved {
+    border: solid #ccc 1px;
+    border-radius: 6px;
+}
+.table-curved td, .table-curved th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.table-curved tr > *:first-child {
+    border-left: 0px;
+}
+.table-curved tr:first-child > * {
+    border-top: 0px;
+}
+/*EFECTO TABLA RANKUING				FIN*/
+
+/*  ESTRELLAS 			INICIO*/
+
+.carousel-caption {
+
+   right: auto;
+
+   left: 5%;
+
+}
+.valoracion {
+
+    position: relative;
+    left: 14px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.valoracion input {
+    position: absolute;
+    top: -100px;
+}
+
+
+.valoracion label {
+    float: right;
+    color: #040a25;
+    font-size: 20px; 
+}
+
+
+
+/*  ESTRELLAS 			FIN*/
+
