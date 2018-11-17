@@ -14,7 +14,7 @@ Hashtags.prototype.autorizar = function(){
      {},
      function (reply, rate, err) {
          var bearer_token = reply.access_token;
-         console.log(bearer_token);
+       
        }
    );
 
@@ -29,7 +29,7 @@ Hashtags.prototype.search = function(){
        httpmethod:"GET",    
        q: 'Battlefield V',
        tweet_mode:'extended',
-      
+       lang:'es',
        count : '20'
      },
      (reply) => {
@@ -41,6 +41,8 @@ Hashtags.prototype.search = function(){
            
              if(typeof reply.statuses[i].full_text !== "undefined"){
                 this.tuit.push([reply.statuses[i].full_text]);
+                console.log("index: ");
+                
  
                }
              }
