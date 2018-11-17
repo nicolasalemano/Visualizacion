@@ -32,28 +32,20 @@ Hashtags.prototype.search = function(){
        lang:'es',
        count : '20'
      },
-     (reply) => {
-  
-     this.tuit=[];
-         this.imagenes = [];
+     (reply) => {    
+     this.tuit=[];         
          if((reply.httpstatus == 200)&&(reply.statuses.length>0)){
-           for(i=0;i<reply.statuses.length;i++){
-           
-             if(typeof reply.statuses[i].full_text !== "undefined"){
-                this.tuit.push([reply.statuses[i].full_text]);
-                console.log("index: ");
-                
- 
+           for(i=0;i<reply.statuses.length;i++){           
+             if(typeof reply.statuses[i].full_text !== "undefined"){              
+                 this.tuit.push([reply.statuses[i].full_text,reply.statuses[i].user.profile_image_url_https,reply.statuses[i].user.location,reply.statuses[i].user.name]);
                }
              }
-             console.log(this.tuit),
+            
             this.armarGrid();
          }
          else{
-          console.log(this.tuit),
             document.getElementById("comentario").innerHTML = '<div class="errorMsj">¡¡¡NO HAY COMENTARIOS !!!</div>';
-         }
-      //  document.getElementById("loading").style.display = 'none';
+         }         
        }
    );
 }
@@ -63,22 +55,28 @@ Hashtags.prototype.getNextResult = function(){
 }
 
 Hashtags.prototype.armarGrid = function(){
-   var contenido = '<ul id="idGrilla" class="grid">';
+  var contenido='<table class="table table-dark table-striped table-curved">';
+  contenido+='<thead class="ranking-titulo">';
+  contenido+='</thead>';
+  contenido+='<tbody>';
+   //0=texto
+   //1=imagen perfil
+   //2=locacion del usuario
+   //3=nombre
    for (var l = 0; l < this.tuit.length; l++) {
-         contenido = contenido + '<li><div style="color:#FF0000;">'+this.tuit[l]+'</div></li>';
+     contenido+='<tr>';
+        contenido+='<td class="col-2">';
+          contenido+='<div class="col">';
+            contenido+='<p style="font-size:10px"><img src="'+this.tuit[l][1]+'"><br>'+this.tuit[l][3]+'<br>'+this.tuit[l][2]+'</p>';
+          contenido+='</div>';
+        contenido+='</td>';
+        contenido+='<td class="col-10">'+this.tuit[l][0]+'</td>';
+      contenido+='</tr>';
    }
-   contenido = contenido + '</ul>';
+  
+  contenido+='</tbody>';
+  contenido+='</table>'; 
    document.getElementById("comentario").innerHTML = contenido;
 }
 
-Hashtags.prototype.indexOfArray = function(val, array) {
-  for(j = 0; j < array.length; j++) {
-    if(array[j][0] == val)
-      return true;
-  }
-  return false;
-}
 
-Hashtags.prototype.getImagenes = function(){
-  return this.tuit;
-}

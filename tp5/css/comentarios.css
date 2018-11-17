@@ -1,0 +1,123 @@
+
+.titulo-comentario{
+	color: #49e8d9;
+}
+
+.com{
+	width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -27px;
+    margin-top: -10px;
+
+}
+
+.tweet{
+	color:#35B4A8;
+	background-color: red;
+}
+
+
+
+
+/* LOADING CIRCULAR     INICIO*/
+
+
+
+
+.loader-circular {
+	position: relative;
+	height: 60px;
+	width: 60px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color: #eee;
+ 
+	-webkit-animation: animacion .6s linear 0s infinite;
+	-moz-animation: animacion .6s linear 0s infinite;
+	animation: animacion .6s linear 0s infinite;
+}
+.loader-circular:before,
+.loader-circular:after {
+	content: '';
+	display: block;
+	position: absolute;
+}
+.loader-circular:before {
+	border-radius: 0 30px 30px 0;
+	height: 60px;
+	width: 50%;
+	top: 0;
+	right: 0;
+ 
+	background-image: -webkit-linear-gradient(#eee, #aaa);
+	background-image: -moz-linear-gradient(#eee, #aaa);
+	background-image: linear-gradient(#eee, #aaa);
+}
+.loader-circular:after {
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	top: 50%;
+	left: 50%;
+	background-color: #fff;
+ 
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	
+}
+ 
+@-webkit-keyframes animacion {
+	to { -webkit-transform: rotate(360deg);	}
+}
+@-moz-keyframes animacion {
+	to { -moz-transform: rotate(360deg); }
+}
+@keyframes animacion {
+	to { transform: rotate(360deg);	}
+}
+
+/* LOADING CIRCULAR     FIN*/
+
+
+
+/*NO SE USA//
+/*EFECTO PRELOADER 	INICIO*/
+
+#preloader5{
+    position:relative;
+    width:30px;
+    height:30px;
+    background:#3498db;
+    border-radius:50px;
+    animation: preloader_5 1.5s infinite linear;
+}
+#preloader5:after{
+    position:absolute;
+    width:50px;
+    height:50px;
+    border-top:10px solid #9b59b6;
+    border-bottom:10px solid #9b59b6;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-radius:50px;
+    content:'';
+    top:-20px;
+    left:-20px;
+    animation: preloader_5_after 1.5s infinite linear;
+}
+@keyframes preloader_5 {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);background:#2ecc71;}
+    100% {transform: rotate(360deg);}
+}
+@keyframes preloader_5_after {
+    0% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+    50% {border-top:10px solid #3498db;border-bottom:10px solid #3498db;}
+    100% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+}
+
+/*EFECTO PRELOADER 	FIN*/
