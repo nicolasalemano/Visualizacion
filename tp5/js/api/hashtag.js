@@ -42,7 +42,10 @@ Hashtags.prototype.search = function(){
              }
             
             this.armarGrid();
+
+           
          }
+
          else{
             document.getElementById("comentario").innerHTML = '<div class="errorMsj">¡¡¡NO HAY COMENTARIOS !!!</div>';
          }         
@@ -55,7 +58,7 @@ Hashtags.prototype.getNextResult = function(){
 }
 
 Hashtags.prototype.armarGrid = function(){
-  var contenido='<table class="table table-dark table-striped table-curved">';
+  var contenido='<table class="table table-dark table-striped table-curved scroll">';
   contenido+='<thead class="ranking-titulo">';
   contenido+='</thead>';
   contenido+='<tbody>';
@@ -65,12 +68,35 @@ Hashtags.prototype.armarGrid = function(){
    //3=nombre
    for (var l = 0; l < this.tuit.length; l++) {
      contenido+='<tr>';
-        contenido+='<td class="col-2">';
-          contenido+='<div class="col">';
-            contenido+='<p style="font-size:10px"><img src="'+this.tuit[l][1]+'"><br>'+this.tuit[l][3]+'<br>'+this.tuit[l][2]+'</p>';
+        contenido+='<td class="col-2 "  ';//id="contenedor">
+          contenido+='<div class="col ">';//x9 animacion-mensajes
+            contenido+='<div  class="" >';
+              contenido+='<div class="">';
+                contenido+='<a class="" href="#">';
+                 contenido+='<p class="" style="font-size:10px"><img src="'+this.tuit[l][1]+'"><br>'+this.tuit[l][3]+'<br>'+this.tuit[l][2]+'</p>';
+                 contenido+='</a>';
+
+              //contenido+='<p class="animacion-mensajes" style="font-size:10px"><img src="'+this.tuit[l][1]+'"><br>'+this.tuit[l][3]+'<br>'+this.tuit[l][2]+'</p>';
+            contenido+='</div>';
           contenido+='</div>';
         contenido+='</td>';
-        contenido+='<td class="col-10">'+this.tuit[l][0]+'</td>';
+
+        contenido+='<td class="col-10 lab"  ';//id="contenedor">
+          contenido+='<div class="col ">';//x9 animacion-mensajes
+            contenido+='<div  class="animacion-contenedor" >';
+              contenido+='<div class="animacion-comentario">';
+            
+                 contenido+='<p >'+this.tuit[l][0]+'</p>';
+          
+
+              //contenido+='<p class="animacion-mensajes" style="font-size:10px"><img src="'+this.tuit[l][1]+'"><br>'+this.tuit[l][3]+'<br>'+this.tuit[l][2]+'</p>';
+            contenido+='</div>';
+          contenido+='</div>';
+        contenido+='</td>';
+
+
+
+        
       contenido+='</tr>';
    }
   
