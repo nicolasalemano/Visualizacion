@@ -8,6 +8,8 @@ body {
     font-family: 'Tahoma';
 }
 
+
+
 .container {
     width: 1000px;
     padding: 0 0;
@@ -16,6 +18,11 @@ body {
     opacity: 0.4;
     width:298px; 
     height:180px;
+}
+
+.logo-imagen{
+    max-width: 40;
+    max-height: 40px;
 }
 
 .form-control-borderless {

@@ -3,6 +3,12 @@
 	color: #49e8d9;
 }
 
+
+
+.carusel-descripcion{
+color: black;
+font-size:80%;
+}
 .com{
 	width: 100px;
     height: 100px;
@@ -29,6 +35,9 @@
 	color:#35B4A8;
 	background-color: red;
 }
+
+
+
 
 /*  ANIMACION COMENTARIO  INICIO*/
 
@@ -151,3 +160,11 @@
 }
 
 /*EFECTO PRELOADER 	FIN*/
+
+.errorMsj{
+   font-size: 45px;
+   color: red;
+   text-align: center;
+   margin-top: 10%;
+   background: rgba(204, 204, 204, 0.5);
+}
