@@ -6,8 +6,10 @@
 
 
 .carusel-descripcion{
-color: black;
+color: #49e8d9;
 font-size:80%;
+background-color: black; 
+opacity:0.6;
 }
 .com{
 	width: 100px;

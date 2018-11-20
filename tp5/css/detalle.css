@@ -14,13 +14,14 @@
 
 .ranking{
 
-	 padding-left: 0;
-    padding-right: 0;
-	width: 380px;
+	padding-left: 0;
+    padding-right: -10;
+	width: 360px;
 	height: 380px;
-	overflow-y: scroll;
+	overflow-y: auto;
 
 }
+
 
 .medalla{
 	max-width: 30px;
@@ -88,7 +89,7 @@
 
 .btn-jugar {
   display: inline-block;
-  background: transparent;
+  
   text-transform: uppercase;
   font-weight: 500;
   font-style: normal;
