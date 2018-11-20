@@ -54,7 +54,8 @@ opacity:0.6;
    padding: 15px;
 }
 .animacion-comentario:hover {
-   transform: scale(1.3) rotate(5deg) translateY(8px);
+	color: orange;
+   transform: scale(1.1)  translateZ(5px) ;
 }
 /*  ANIMACION COMENTARIO FIN*/
 
