@@ -9,13 +9,14 @@ body {
 }
 
 
+
 .container {
     width: 1000px;
     padding: 0 0;
 }
 .controles_IMG{
     opacity: 0.4;
-    width:298px; 
+    width:298px;
     height:180px;
 }
 .logo{
@@ -26,7 +27,7 @@ body {
 
 .logo-imagen{
     max-width: 40;
-    max-height: 40px;   
+    max-height: 40px;
 
 }
 
@@ -39,7 +40,7 @@ body {
 .form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
     border: none;
     outline: none;
-    box-shadow: none;    
+    box-shadow: none;
     size: 12px;
 }
         .contBuscar{
@@ -47,9 +48,9 @@ body {
 
 }
 
-.breadcrumb{ 
+.breadcrumb{
     background-color: #a9a8a8;
-    font-family: 'Tahoma';  
+    font-family: 'Tahoma';
 }
 .punnt{
     margin-left:30px;
@@ -58,11 +59,11 @@ body {
 }
 
 .mejorPuntaje{
-    
+
     margin-left:410px;
     margin-top: 10px;
     text-align: center;
-    font-size: 17px;    
+    font-size: 17px;
 }
 
 
@@ -101,7 +102,7 @@ body {
 
 #inicio:hover {
    background-color: #0E3D68;
-    color: #49e8d9; 
+    color: #49e8d9;
     box-shadow: 0 0 1em 0.2em #040a25;
 }
 
@@ -175,7 +176,7 @@ body {
 
 .finJuego {
     font-size: 54px;
-   
+
     text-align: center;
     animation: animacionFinJuego 2s;
 }
@@ -190,7 +191,7 @@ footer{
 .context-dark, .bg-gray-dark, .bg-primary {
    /*color: rgba(255, 255, 255, 0.8);
    */
-   color:#a6c5e6;   
+   color:#a6c5e6;
 }
 
 .contact-list{
@@ -226,6 +227,7 @@ ul, ol {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
 }
+
 .social-container .col {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
