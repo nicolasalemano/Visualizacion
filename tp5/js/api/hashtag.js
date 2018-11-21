@@ -59,8 +59,8 @@ Hashtags.prototype.getNextResult = function(){
 
 Hashtags.prototype.armarGrid = function(){
   var contenido='<table class="table table-dark table-striped table-curved scroll">';
-  contenido+='<thead class="ranking-titulo">';
-  contenido+='</thead>';
+ // contenido+='<thead class="ranking-titulo">';
+ // contenido+='</thead>';
   contenido+='<tbody>';
    //0=texto
    //1=imagen perfil
@@ -76,7 +76,7 @@ Hashtags.prototype.armarGrid = function(){
               //contenido+='</div>';
           //contenido+='</div>';
         contenido+='</td>';
-        contenido+='<td class="col-10 lab"  ';//id="contenedor">
+        contenido+='<td class="col-10 lab" > ';//id="contenedor">
           contenido+='<div class="col ">';//x9 animacion-mensajes
             contenido+='<div  class="animacion-contenedor" >';
               contenido+='<div class="animacion-comentario">';            
