@@ -68,7 +68,7 @@ Hashtags.prototype.armarGrid = function(){
    //3=nombre
    for (var l = 0; l < this.tuit.length; l++) {
      contenido+='<tr>';
-        contenido+='<td class="col-2 "  ';
+        contenido+='<td class="col-2 "  >';
           contenido+='<div class="col ">';
             //contenido+='<div  class="" >';
               //contenido+='<div class="">';
