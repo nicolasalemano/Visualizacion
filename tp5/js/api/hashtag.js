@@ -79,6 +79,7 @@ Hashtags.prototype.armarGrid = function(){
         contenido+='<td class="col-10 lab" > ';//id="contenedor">
           contenido+='<div class="col ">';//x9 animacion-mensajes
             contenido+='<div  class="animacion-contenedor" >';
+            contenido+='<samp></samp>';
              // contenido+='<div class="animacion-comentario">';            
                  contenido+='<p >'+this.tuit[l][0]+'</p>';
             contenido+='</div>';
