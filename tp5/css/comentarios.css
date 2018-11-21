@@ -53,8 +53,8 @@ opacity:0.6;
    padding: 15px;
 }
 .animacion-comentario:hover {
-	color: orange;
-	background-color: red;
+	color: white;
+	background-color: #49e8d9;
    transform: scale(1.1)  translateZ(5px) ;
 }
 /*  ANIMACION COMENTARIO FIN*/
