@@ -48,10 +48,39 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav my-2 my-lg-0">
-                    <div class="logo">
+
+
+
+            <div id="loginContainer">
+                <a href="#" id="loginButton"><span>Login</span><em></em></a>
+                <div style="clear:both"></div>
+                <div id="loginBox">                
+                    <form id="loginForm">
+                        <fieldset id="body">
+                            <fieldset>
+                                <label for="email">Email Address</label>
+                                <input type="text" name="email" id="email" />
+                            </fieldset>
+                            <fieldset>
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" />
+                            </fieldset>
+                            <input type="submit" id="login" value="Sign in" />
+                            <label for="checkbox"><input type="checkbox" id="checkbox" />Remember me</label>
+                        </fieldset>
+                        <span><a href="#">Forgot your password?</a></span>
+                    </form>
+                </div>
+            </div>
+
+<!--
+                   < <div class="logo">
                         <h5>Usuario<img class="logo-imagen" src="images/usuario/usuario-plata.png">  </h5>
                     </div>
 
+
+                  -->
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -269,6 +298,7 @@
     <script type="text/javascript" src="js/api/codebird.js"></script>
     <script type="text/javascript" src="js/api/hashtag.js"></script>
     <script type="text/javascript" src="js/api/main.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
 
 </body>
 
