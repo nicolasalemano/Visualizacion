@@ -10,14 +10,12 @@
 }
 
 
-
-
 .ranking{
 
 	padding-left: 0;
     padding-right: -10;
-	width: 360px;
-	height: 380px;
+	
+	height: 394px;
 	overflow-y: auto;
 
 }
@@ -106,8 +104,8 @@
   text-decoration: none;
   margin: 0.625rem;
   border: none;
-  color:black;
-  border: 3px solid black;
+  color:white;
+  border: 3px solid white;
 }
 
 .btn-jugar:hover {
