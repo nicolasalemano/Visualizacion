@@ -151,3 +151,8 @@
  max-width: 450px;
  max-height: 250px;
 }
+
+.estrella{
+  max-height: 20px;
+  max-width: 20px;
+}
