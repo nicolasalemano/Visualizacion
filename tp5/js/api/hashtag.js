@@ -3,7 +3,7 @@ function Hashtags(){
    this.cb = new Codebird;
   this.cb.setConsumerKey("Nb4JAkS9MB4JQB8Y7bw58Z13f", "fwhpcF7LVpaowqSHIuCHuRCZ2mfvQDZU5izk2MdpOdZASurQqV");
    this.cb.setToken("34728593-FiBXhIVjQ1aftiwJhfrixlU2KZ0EF302AbQGixYUB", "L0StWgFwXhAhIGInWQmrRpQSavVN1qYiota4q8b2TDb9G");
-   this.cb.setProxy("https://cb-proxy.herokuapp.com/");
+  // this.cb.setProxy("https://cb-proxy.herokuapp.com/");
    this.next='';
 }
 
