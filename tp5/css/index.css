@@ -121,7 +121,7 @@
 }
 
 .button {
-    background-color: #49e8d9;
+    background-color: #a6c5e6;
     text-decoration-color: black;
     border: none;
     color: white;
@@ -152,7 +152,7 @@
  max-height: 250px;
 }
 
-.estrella{
-  max-height: 20px;
-  max-width: 20px;
+.stars{
+ max-width: 90px;
+ max-height: 50px;
 }
