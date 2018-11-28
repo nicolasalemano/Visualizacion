@@ -1,3 +1,141 @@
+<<<<<<< HEAD
+
+.titulo-comentario{
+	color: #a6c5e6;
+}
+
+
+
+.carusel-descripcion{
+color: #49e8d9;
+font-size:80%;
+background-color: black; 
+opacity:0.6;
+}
+.com{
+	width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -27px;
+    margin-top: -10px;
+
+}
+.comentario{
+
+	 padding-left: 0;
+    padding-right: 0;
+	width: 1000px;
+	height: 480px;
+	overflow-y:scroll;
+	
+
+
+}
+
+.tweet{
+	color:#35B4A8;
+	background-color: red;
+}
+
+
+
+/*  ANIMACION COMENTARIO  INICIO
+
+
+
+.animacion-contenedor {
+   padding-top:20px;
+}
+.animacion-comentario{
+   transition: transform 0.7s linear;
+   float: left;
+   padding: 15px;
+}
+.animacion-comentario:hover {
+	color: white;
+	background-color: #49e8d9;
+   transform: scale(1.1)  translateZ(5px) ;
+}
+/*  ANIMACION COMENTARIO FIN*/
+
+
+
+
+
+
+/* LOADING CIRCULAR     INICIO*/
+
+
+
+
+.loader-circular {
+	position: relative;
+	height: 60px;
+	width: 60px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color: #35B4A8;
+ 
+	-webkit-animation: animacion .6s linear 0s infinite;
+	-moz-animation: animacion .6s linear 0s infinite;
+	animation: animacion .6s linear 0s infinite;
+}
+.loader-circular:before,
+.loader-circular:after {
+	content: '';
+	display: block;
+	position: absolute;
+}
+.loader-circular:before {
+	border-radius: 0 30px 30px 0;
+	height: 60px;
+	width: 50%;
+	top: 0;
+	right: 0;
+ 
+	background-image: -webkit-linear-gradient(#eee, #aaa);
+	background-image: -moz-linear-gradient(#eee, #aaa);
+	background-image: linear-gradient(#eee, #aaa);
+}
+.loader-circular:after {
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	top: 50%;
+	left: 50%;
+	background-color: #fff;
+ 
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	
+}
+ 
+@-webkit-keyframes animacion {
+	to { -webkit-transform: rotate(360deg);	}
+}
+@-moz-keyframes animacion {
+	to { -moz-transform: rotate(360deg); }
+}
+@keyframes animacion {
+	to { transform: rotate(360deg);	}
+}
+
+/* LOADING CIRCULAR     FIN*/
+
+
+
+
+
+.errorMsj{
+   font-size: 45px;
+   color: red;
+   text-align: center;
+   margin-top: 10%;
+   background: rgba(204, 204, 204, 0.5);
+=======
 
 .titulo-comentario{
 	color: #49e8d9;
@@ -169,4 +307,5 @@ opacity:0.6;
    text-align: center;
    margin-top: 10%;
    background: rgba(204, 204, 204, 0.5);
+>>>>>>> 177f563b98c0d89f9543f926819e9b5484075a7b
 }
