@@ -2,77 +2,113 @@
     margin: 0 0;
     padding: 0 0;
 }
+
 body {
-   /* background-color: #a9a8a8;*/
+    
     background-color: #040a25;
-    font-family: 'Tahoma';
+    font-family: 'Tahoma';width: auto;
 }
 
-
-
-.container {
-    width: 1000px;
-    padding: 0 0;
-}
-.controles_IMG{
-    opacity: 0.4;
-    width:298px;
-    height:180px;
-}
-.logo{
-    position:relative;
-    color: #49e8d9;
-
+.imagen{
+    max-width:60px;
+    max-height:60px;
 }
 
 .logo-imagen{
-    max-width: 40;
-    max-height: 40px;
+    max-height:30px;
+    max-width:30px;
+}
+
+.color{
+    background-color:red;
+}
+.color1
+    background-color:green;
+}
+.bordes{
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid ;
+  background-color:#040a25 !important;
+}
+
+/*Lista de juegos       INICIO*/
+.card-fix{
+    width: 11rem;
+    height: 17rem;
 
 }
 
-.form-control-borderless {
-    border: none;
-    background-color: #0E3D68;
-
+.img-jugar{
+    max-width:40px ;
+    max-height:40px ;  
+}
+/*
+.rotar{
+    position: relative;   
+ 
+    z-index: 1;
+}
+.rotar{
+      perspective: 1000;
+}
+*/
+.rota{
+    width: 100%;
+    height: 100%;
+    background-color:#2d3246;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear; 
+}
+.rotar:hover .rota{
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px white;
 }
 
-.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
-    border: none;
-    outline: none;
-    box-shadow: none;
-    size: 12px;
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
-        .contBuscar{
-    background-color: #040a25;
-
-}
-
-.breadcrumb{
-    background-color: #040a25;
-    font-family: 'Segoe UI';
-    color: #49e8d9;
-}
-
-.breadcrumb-item.active{
-   color: #a6c5e6;
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
 }
 
-.punnt{
-    margin-left:30px;
-    margin-top: 10px;
-    font-size: 20px;
+/*Lista de juegos       FIN*/
+
+
+
+
+
+/*Lista de juegos  22222222     INICIO*/
+
+
+
+
+/*Lista de juegos  22222222     FIN*/
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar{
+    background-color: #040a25 !important;
 }
-
-.mejorPuntaje{
-
-    margin-left:410px;
-    margin-top: 10px;
-    text-align: center;
-    font-size: 17px;
-}
-
-
 .navbar-color {
     background-color: #040a25;
 }
@@ -86,107 +122,43 @@ body {
     font-size: 25px;
 }
 
+.abs-center-x {
+  position: absolute;
+  left: 47%;
+  transform: translateX(-50%);
+}
 
-.juego-container {
-    width: 100%;
-    height: 600px;
+
+.advanced-search-input {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #cad0d8 !important;
+  font-size: 15px !important;
 }
 
 
 
-#inicio {
-  color: #49e8d9;
-  background-color:#0E3D68;
-  height: 50px;
-  width: 130px;
-  font-size: 23px ;
-  margin-top: 80px;
-  text-align: center;
-  visibility: hidden;
+
+.contBuscar{
+    background-color: #040a25;
+
 }
 
 
-#inicio:hover {
-   background-color: #0E3D68;
+/*footer                     inicio*/
+
+.breadcrumb{
+    background-color: #040a25;
+    font-family: 'Segoe UI';
     color: #49e8d9;
-    box-shadow: 0 0 1em 0.2em #040a25;
 }
 
-
-#juego {
-    position: absolute;
-    overflow: hidden;
-    float: left;
-    width: 1000px;
-    height: 100%;
-    background-image: url("../images/nuves.png"),url("../images/cielo.png");
-    background-size: auto,  auto;
-    background-repeat: repeat, repeat;
-    background-position: 0px 0px, 0px 0px;
+.breadcrumb-item.active{
+   color: #a6c5e6;
 }
-
-.animacion-fondo {
-    animation: moverFondo linear 5s infinite;
-}
+/*breadcrumb                     fin*/
 
 
-
-.naveEspacial {
-    position: absolute;
-    width: 55px;
-    height: 95px;
-    background-image: url("../images/nave.png");
-    background-size: auto;
-    bottom: 50px;
-    left: 322px;
-}
-
-.izq {
-    animation: deslizarIzquierda ease-out 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.der {
-    animation: deslizarDerecha ease-out 0.5s;
-    animation-fill-mode: forwards;
-}
-
-
-.enemigo {
-    position: absolute;
-    width: 98px;
-    height: 100px;
-    background-image: url("../images/enemigo.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    bottom: 1000px;
-    left: 322px;
-}
-
-
-.vueloEnem {
-    animation: vueloEnemigo linear;
-    animation-duration: 2.3s;
-}
-
-
-.explosion {
-    width: 192px;
-    height: 150px;
-    position: absolute;
-    background: url("../images/exp.png") 0 0;
-    animation: explosion1 1s steps(25) 1;
-}
-
-
-
-.finJuego {
-    font-size: 54px;
-
-    text-align: center;
-    animation: animacionFinJuego 2s;
-}
-/**/
+/*footer                     inicio*/
 
 footer{
     margin-top: 35px;
@@ -249,75 +221,9 @@ ul, ol {
     visibility: hidden;
     transition: .22s ease;
 }
-/**/
+/*footer       fin*/
 
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0;
-    }
-}
-
-@keyframes scaleSize {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(0.8);
-    }
-}
-
-
-@keyframes animacionFinJuego {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
-@keyframes moverFondo {
-    from {
-        background-position:  0px 0px, 0px 0px;
-    }
-
-    to {
-        background-position: 0px 2400px, 0px 1200px;
-    }
-}
-
-
-@keyframes vueloEnemigo {
-     from {
-        transform: translate();
-    }
-
-    to {
-        transform: translate(0px, 750px);
-    }
-}
-@keyframes explosion1 {
-    100% {
-        background-position: -4800px 0px;
-    }
-}
-
-
-@keyframes deslizarIzquierda {
-    100% {
-        transform: rotateY(-50deg)
-    }
-}
-
-@keyframes deslizarDerecha {
-    100% {
-        transform: rotateY(50deg)
-    }
-}
 
 
 /*LOGIN         INICIO*/
@@ -488,3 +394,5 @@ input:focus {
 
 
 /*LOGIN         FIN*/
+
+

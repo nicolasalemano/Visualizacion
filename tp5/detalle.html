@@ -17,46 +17,62 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="row"> <!--  NAV  -->
-            <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-color">
-                    <a class="navbar-brand" href="index.html"><b>Zona Juegos</b></a>
-                    <ul class="navbar-nav mr-auto">
-                        <li> 
-                            <div class=" justify-content-center">
-                                <div  class="">
-                                    <form class="card card-sm contBuscar">
-                                        <div class="card-body row no-gutters align-items-center">
-                                            <div class="col-auto">
-                                                <i class="fas fa-search h4 text-body"></i>
-                                            </div>
-                                            <!--end of col-->
-                                            <div class="col">
-                                                <input class="form-control  form-control-borderless" type="search" placeholder="Buscar Juego">
-                                            </div>
-                                            <!--end of col-->
-                                            <div class="col-auto">
-                                                <button class="btn btn-outline-info" type="submit">BUSCAR</button>
-                                            </div>
-                                            <!--end of col-->
-                                        </div>
-                                    </form>
-                                </div>
-                                <!--end of col-->
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav my-2 my-lg-0"> 
+    <div class="container-fluid">
+       <div class="">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-color">        
+        <a class="navbar-brand" href="index.html"><b>Zona Juegos</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navbar-color" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              
+            </li>
+
+            <li class="nav-item">
+            
+            </li>
+          </ul>
+
+      <ul class="navbar-nav mr-auto">
+            <form class="card card-sm contBuscar">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <i class="fas fa-search h4 text-body"></i>
+                    </div>
+                    
+                    <div class="col">
+                        <input class="form-control  form-control-borderless" type="search" placeholder="Buscar Juego">
+                    </div>
+                   
+                    <div class="col-auto">
+                        <button class="btn btn-outline-info" type="submit">BUSCAR</button>
+                    </div>                    
+                </div>
+            </form>
+      </ul>
+
+            <ul class="navbar-nav my-2 my-lg-0"> 
                     <div id="loginContainer">  
                         <div class="logo">
                             <h5>Usuario<img class="logo-imagen" src="images/usuario/usuario-plata.png">  </h5> 
                         </div>   
                     </div>                  
                     </ul>
-                </nav>
-            </div>
         </div>
+      </nav>
+      </div>
+
+
+
+
+
+        
         <div class="row"> <!-- BREADCRUMB   -->
             <div class="col">
                 <nav aria-label="breadcrumb">
@@ -79,7 +95,7 @@
                                     <div class="carousel-caption d-none d-md-block carusel-descripcion ">
                                         <h5>Air fighter</h5>
                                          <p><span>Lanzamiento 13.11.2018  ★★★★★</span> 271 Votos
-                                            <a class="btn-jugar" href="https://nicolasalemano.github.io/Visualizacion/tp4/">Jugar</a> 
+                                            <a class="btn-jugar" href="juego.html">Jugar</a> 
                                             <a class="btn-jugar" href="#">Descargar</a>
                                          </p>  
                                     </div>
@@ -125,7 +141,7 @@
                 
             </div>
         </div>     
-        <br>
+        <br> <br>
         <div class="row"> <!-- COMENTARIOS   -->
             <dir class="col">
                 <div class="text-center"> 
