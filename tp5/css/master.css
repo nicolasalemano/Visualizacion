@@ -4,7 +4,7 @@
 }
 
 body {
-    
+
     background-color: #040a25;
     font-family: 'Tahoma';width: auto;
 }
@@ -47,12 +47,12 @@ body {
 
 .img-jugar{
     max-width:40px ;
-    max-height:40px ;  
+    max-height:40px ;
 }
 /*
 .rotar{
-    position: relative;   
- 
+    position: relative;
+
     z-index: 1;
 }
 .rotar{
@@ -64,7 +64,7 @@ body {
     height: 100%;
     background-color:#2d3246;
     transform-style: preserve-3d;
-    transition: all 1.0s linear; 
+    transition: all 1.0s linear;
 }
 .rotar:hover .rota{
   transform: rotateY(180deg);
@@ -97,17 +97,19 @@ body {
 
 /* The controlsy */
 .carousel-control {
-    left: -12px;
-    height: 40px;
-    width: 40px;
+    left: 500px;
+    height: 160px;
+    width: 160px;
     background: none repeat scroll 0 0 #222222;
-    border: 4px solid #FFFFFF;
-    border-radius: 23px 23px 23px 23px;
+    /* border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px; */
     margin-top: 90px;
 }
-.carousel-control.right {
-    right: -12px;
-}
+
+/* .carousel-control.right {
+  align-self: flex-end; /* Aligns it at the bottom */
+
+} */
 /* The indicators */
 .carousel-indicators {
     right: 50%;
@@ -264,11 +266,11 @@ ul, ol {
 }
 
 /* Login Button */
-#loginButton { 
+#loginButton {
     display:inline-block;
     float:right;
-    background:#d2e0ea url(../images/login/buttonbg.png) repeat-x; 
-    border:1px solid #899caa; 
+    background:#d2e0ea url(../images/login/buttonbg.png) repeat-x;
+    border:1px solid #899caa;
     border-radius:3px;
     -moz-border-radius:3px;
     position:relative;
@@ -278,10 +280,10 @@ ul, ol {
 
 /* Login Button Text */
 #loginButton span {
-    color:#445058; 
-    font-size:14px; 
-    font-weight:bold; 
-    text-shadow:1px 1px #fff; 
+    color:#445058;
+    font-size:14px;
+    font-weight:bold;
+    text-shadow:1px 1px #fff;
     padding:7px 29px 9px 10px;
     background:url(../images/login/loginArrow.png) no-repeat 53px 7px;
     display:block
@@ -300,7 +302,7 @@ ul, ol {
     z-index:29;
 }
 
-/* If the Login Button has been clicked */    
+/* If the Login Button has been clicked */
 #loginButton.active {
     border-radius:3px 3px 0 0;
 }
@@ -320,7 +322,7 @@ ul, ol {
 
 /* Login Form */
 #loginForm {
-    width:248px; 
+    width:248px;
     border:1px solid #899caa;
     border-radius:3px 0 3px 3px;
     -moz-border-radius:3px 0 3px 3px;
@@ -420,5 +422,3 @@ input:focus {
 
 
 /*LOGIN         FIN*/
-
-
