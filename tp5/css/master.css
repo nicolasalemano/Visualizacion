@@ -153,11 +153,6 @@ background: #428bca;
     font-size: 30px;
 }
 
-.abs-center-x {
-  position: absolute;
-  left: 47%;
-  transform: translateX(-50%);
-}
 
 
 .advanced-search-input {
